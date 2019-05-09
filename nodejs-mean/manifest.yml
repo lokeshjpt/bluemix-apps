@@ -1,0 +1,15 @@
+applications:
+- buildpack: sdk-for-nodejs
+  command: npm prune --production && NODE_ENV=production npm start
+  domain: null
+  env:
+    NPM_CONFIG_PRODUCTION: false
+  host: null
+  instances: 1
+  memory: 256M
+  name: nodejsmean
+  routes:
+  - route: nodejs-mean.us-south.cf.appdomain.cloud
+  services:
+  - cloudant-lokeshnodemsapp-pm7nsdrefrsn1j1
+  timeout: 180
