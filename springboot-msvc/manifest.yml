@@ -1,0 +1,13 @@
+applications:
+- buildpack: java_buildpack
+  domain: null
+  host: null
+  instances: 1
+  memory: 1024M
+  name: springbootmsvc
+  path: ./target/springbootmsvc-1.0-SNAPSHOT.jar
+  routes:
+  - route: springboot-msvc.us-south.cf.appdomain.cloud
+  services:
+  - cloudant-lokeshnodemsapp-pm7nsdrefrsn1j1
+  timeout: 180
